@@ -1,0 +1,27 @@
+echo "cImpVolBasic.cpp compilation ..."
+g++ -c cImpVolBasic.cpp -std=c++11 -fopenmp  -O2
+echo "cImpVolBasic.cpp compilation completed"
+echo "indexStructure.cpp compilation ..."
+g++ -c indexStructure.cpp -std=c++11 -fopenmp   -O2
+echo "indexStructure.cpp compilation completed"
+
+  
+echo "compilation of Jaeckel's code ..."
+g++ -c erf_cody.cpp rationalcubic.cpp normaldistribution.cpp lets_be_rational.cpp  -fopenmp -std=c++11 -O2
+echo "compilation of Jaeckel's code completed"
+
+echo "compareCPU.cpp compilation ..."
+g++  -c compareCPU.cpp -fopenmp -std=c++11  
+echo "compareCPU.cpp compilation completed"
+
+
+
+
+
+
+
+echo "Linking ..."
+g++  -o compCPU compareCPU.o cImpVolBasic.o indexStructure.o lets_be_rational.o erf_cody.o rationalcubic.o normaldistribution.o -fopenmp -std=c++11  
+echo "Linking completed"
+echo "You can execute the code by typing"
+echo "./compCPU"
