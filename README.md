@@ -1,6 +1,8 @@
 # PDE-method-for-implied-volatility
 
- 
+The code requires the file loadPartition.txt that github did not allow (because it is 46MB). The file can be downloaded from the following dropbox link
+
+https://www.dropbox.com/scl/fi/sh1oeyfn1dw6288465t9v/loadPartition.txt?rlkey=qte4bg1s4v1i8aztkzitastk3&dl=0
 
 The most updated version of the paper "A PDE Method for Estimation of Implied Volatility" is located at 
 https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3264356
